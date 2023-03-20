@@ -1,0 +1,121 @@
+----------------------------------LoopBack--------------------------------
+
+1--> Introduction 
+------------------------------------
+  LoopBack is a highly extensible open source nodejs framework.It is used to build dynamic end-to-end rest API
+
+
+
+2--> Features
+-----------------------------------
+ * dynamic rest Api
+ * Connect with multiple data source(MySql,MongoDB..ect)
+ * Default Api explorer
+ * Separate components for File-storatge,Third-party login and 0uth 2.0
+
+
+
+--> Check the version And install matching NodeJs
+
+
+
+3-->  Getting Setup
+-----------------------------------
+-> install loopback-cli  -- npm install -g @loopback-cli
+-> lb --This command used to create our project
+-> node . -- used to excecute the project
+---> Server.js is the straing point of our project
+
+
+
+4--> LoopBack model creation
+-----------------------------------
+-> lb model :  this command is using for create a model
+-> here we wanna enter some data like model name,data-source type,model's base class ..ect
+
+
+
+
+5--> Debuggibg
+-----------------------------------
+
+  Debugginh is used to add a breakpoint into our project and check exact flow of excecution of our project or needed file
+
+--> node --inspect : this command is using to debugging the project through Chrome Browser
+--> Chrome:inspect ->inspect file->select our file and add a breakpoint
+
+
+
+
+6--> Data-Source in LoopBack
+-----------------------------------
+-> it represents backend system such as databases MySql,MongoDb,PostgreSql
+->it is sused to store the records in our local memory
+
+
+7--> Connecting to MongoDB
+----------------------------------
+-> lb datasource : this command is used to create a connection with mongodb
+-> Here We wand to enter some details like name, port no, host, user, password, and database name
+-> mongod : this command is used to start the mongodb services
+-> Finally open model.config.js file and change data-source name to new mongodb name
+
+
+8--> Connecting to MySql
+----------------------------------
+-> Connecting MySql is similar to connection of mongoDb.
+-> use the command 'lb model' and choose database type mySql
+
+--> lb property : this command is used to adding a new peoperty into our previous model in the database.
+
+
+9--> Database Connections
+----------------------------------
+  Here we make some referencde between two or more tables using the comment "lb relation". Different kind of relations are given below,
+
+ -> One To One Relationship 
+ -> embedOne 
+ -> embedsMany (One To Many)
+ -> One to Many -- Seperate table 
+ -> Many To Many
+ -> One To One relationship as a separate model
+
+
+10--> Authentication
+-----------------------------------
+ Almost Authentication classes are inbuild in loopback
+  -> User Class : it's already implements all kind of authentications
+ 
+  	Redirect all end Points :- 
+ 	----------------------
+    	-> Using the command "lb acl"
+    	-> Choose currect format from under the Commant
+	-> set only autherized user to done an activity
+
+11--> Make a Public Route
+-----------------------------------
+  -> lb acl command using here.but change the acl commant scope to 'a single methos' and always choose corresponding data from the list
+
+
+
+
+ --> if we wnat to change a previous model into acl then change the persisted base class to user class from .json file
+
+
+
+
+12--> Custom remote methods in loopback
+---------------------------------------------
+ -> find the current login user id
+ -> filtering data using category property
+ -> FindOne(FindById)
+ 
+
+
+
+
+
+
+
+
+
